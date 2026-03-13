@@ -1,8 +1,12 @@
 import logging
+import os
+import pandas as pd 
+os.makedirs("logs", exist_ok=True)
 
 logging.basicConfig(
     filename="logs/fraud_engine.log",
-    level=logging.ERROR
+    level=logging.ERROR,
+    format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
 def validate_transactions(transactions, merchants):
@@ -10,7 +14,7 @@ def validate_transactions(transactions, merchants):
     valid_merchants = merchants.set_index("merchant_id")
 
     valid_rows = []
-
+    
     for _, row in transactions.iterrows():
 
         merchant_id = row["merchant_id"]
@@ -29,6 +33,10 @@ def validate_transactions(transactions, merchants):
 
         if row["transaction_time"] is None:
             logging.error("Invalid timestamp")
+            continue
+
+        if pd.isna(row["transaction_time"]):
+            logging.error(f"Invalid timestamp for merchant {merchant_id}")
             continue
 
         valid_rows.append(row)

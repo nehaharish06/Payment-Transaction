@@ -1,3 +1,5 @@
+import pandas as pd
+
 def generate_settlement(transactions, merchants):
 
     valid = transactions[transactions["transaction_status"] == "VALID"]

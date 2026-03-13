@@ -1,0 +1,42 @@
+2026-03-13 13:24:18,541 - ERROR - Blocked merchant M006
+2026-03-13 13:24:18,542 - ERROR - Negative transaction amount
+2026-03-13 13:24:18,543 - ERROR - Unknown merchant M999
+2026-03-13 13:26:58,897 - ERROR - Blocked merchant M006
+2026-03-13 13:26:58,898 - ERROR - Negative transaction amount
+2026-03-13 13:26:58,898 - ERROR - Unknown merchant M999
+2026-03-13 14:54:58,815 - ERROR - Blocked merchant M006
+2026-03-13 14:54:58,816 - ERROR - Negative transaction amount
+2026-03-13 14:54:58,817 - ERROR - Unknown merchant M999
+2026-03-13 14:56:53,125 - ERROR - Blocked merchant M006
+2026-03-13 14:56:53,125 - ERROR - Negative transaction amount
+2026-03-13 14:56:53,125 - ERROR - Unknown merchant M999
+2026-03-13 14:56:58,767 - ERROR - Blocked merchant M006
+2026-03-13 14:56:58,768 - ERROR - Negative transaction amount
+2026-03-13 14:56:58,769 - ERROR - Unknown merchant M999
+2026-03-13 15:01:22,311 - ERROR - Blocked merchant M006
+2026-03-13 15:01:22,312 - ERROR - Negative transaction amount
+2026-03-13 15:01:22,312 - ERROR - Unknown merchant M999
+2026-03-13 15:07:26,342 - ERROR - Blocked merchant M006
+2026-03-13 15:07:26,343 - ERROR - Negative transaction amount
+2026-03-13 15:07:26,345 - ERROR - Invalid timestamp
+2026-03-13 15:07:26,345 - ERROR - Unknown merchant M999
+2026-03-13 15:09:04,969 - ERROR - Blocked merchant M006
+2026-03-13 15:09:04,969 - ERROR - Negative transaction amount
+2026-03-13 15:09:04,971 - ERROR - Invalid timestamp for merchant M002
+2026-03-13 15:09:04,971 - ERROR - Unknown merchant M999
+2026-03-13 15:12:20,554 - ERROR - Blocked merchant 1
+2026-03-13 15:12:20,559 - ERROR - Unknown merchant 99
+2026-03-13 15:12:20,562 - ERROR - Invalid timestamp
+2026-03-13 15:12:20,565 - ERROR - Negative transaction amount
+2026-03-13 15:13:36,549 - ERROR - Blocked merchant 1
+2026-03-13 15:13:36,553 - ERROR - Unknown merchant 99
+2026-03-13 15:13:36,556 - ERROR - Invalid timestamp
+2026-03-13 15:13:36,559 - ERROR - Negative transaction amount
+2026-03-13 15:16:10,142 - ERROR - Blocked merchant 1
+2026-03-13 15:16:10,167 - ERROR - Unknown merchant 99
+2026-03-13 15:16:10,172 - ERROR - Invalid timestamp
+2026-03-13 15:16:10,177 - ERROR - Negative transaction amount
+2026-03-13 15:19:11,914 - ERROR - Blocked merchant 1
+2026-03-13 15:19:11,917 - ERROR - Unknown merchant 99
+2026-03-13 15:19:11,919 - ERROR - Invalid timestamp
+2026-03-13 15:19:11,925 - ERROR - Negative transaction amount
