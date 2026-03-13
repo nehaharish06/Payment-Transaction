@@ -1,5 +1,5 @@
 import pandas as pd
-
+from datetime import datetime
 def detect_fraud(transactions, merchants):
 
     merchants_map = merchants.set_index("merchant_id")
@@ -109,3 +109,25 @@ def generate_fraud_summary(df):
     }
 
     return summary
+
+
+def generate_fraud_alerts(df):
+
+    alerts = df[df["transaction_status"] == "SUSPICIOUS"].copy()
+
+    if alerts.empty:
+        return pd.DataFrame()
+
+    alerts["alert_time"] = datetime.now()
+
+    alert_columns = [
+        "transaction_id",
+        "customer_id",
+        "fraud_reason",
+        "risk_score",
+        "alert_time"
+    ]
+
+    alerts = alerts[alert_columns]
+
+    return alerts
