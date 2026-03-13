@@ -17,7 +17,8 @@ def save_summary(transactions):
         "high_value_frauds": int((transactions["fraud_reason"]=="HIGH_VALUE_TRANSACTION").sum()),
         "cross_border_frauds": int((transactions["fraud_reason"]=="CROSS_BORDER_TRANSACTION").sum()),
         "rapid_transaction_frauds": int((transactions["fraud_reason"]=="RAPID_TRANSACTIONS").sum()),
-        "crypto_high_value_frauds": int((transactions["fraud_reason"]=="CRYPTO_HIGH_VALUE").sum())
+        "crypto_high_value_frauds": int((transactions["fraud_reason"]=="CRYPTO_HIGH_VALUE").sum()),
+        "fraud_rate_percent": round(100 * (transactions["transaction_status"]=="SUSPICIOUS").mean(), 2)
     }
 
     with open("outputs/fraud_summary.json","w") as f:
