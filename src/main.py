@@ -1,6 +1,6 @@
 from loader import load_merchants, load_transactions
 from validator import validate_transactions
-from fraud_engine import detect_fraud, detect_rapid_transactions, generate_fraud_summary, generate_fraud_alerts, calculate_risk_score
+from fraud_engine import detect_fraud, detect_rapid_transactions
 from settlement_engine import generate_settlement
 from reporter import save_processed, save_settlement, save_summary
 import pandas as pd
@@ -23,13 +23,10 @@ def main():
 
     transactions.rename(columns={"country_merchant":"merchant_country"}, inplace=True)
 
-    transactions = calculate_risk_score(transactions)
 
     transactions = detect_rapid_transactions(transactions)
 
-    alerts = generate_fraud_alerts(transactions)
-
-    alerts.to_csv("outputs/fraud_alerts.csv", index=False)
+   
     settlement = generate_settlement(transactions, merchants)
 
     save_processed(transactions)

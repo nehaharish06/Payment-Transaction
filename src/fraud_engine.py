@@ -53,21 +53,7 @@ def detect_rapid_transactions(df):
     return df
 
 
-def calculate_risk_score(df):
 
-    df["risk_score"] = 0
-
-    # High value transaction
-    df.loc[df["transaction_amount"] > 100000, "risk_score"] += 40
-
-    # Crypto high value
-    df.loc[(df["payment_method"] == "CRYPTO") & 
-           (df["transaction_amount"] > 50000), "risk_score"] += 30
-
-    # Cross border transaction
-    df.loc[df["country"] != df["merchant_country"], "risk_score"] += 30
-
-    return df
 
 def detect_duplicate_transactions(df):
 
@@ -92,7 +78,7 @@ def detect_duplicate_transactions(df):
 
     return df
 
-def generate_fraud_summary(df):
+"""def generate_fraud_summary(df):
 
     total_transactions = len(df)
 
@@ -130,4 +116,4 @@ def generate_fraud_alerts(df):
 
     alerts = alerts[alert_columns]
 
-    return alerts
+    return alerts"""
